@@ -1,3 +1,11 @@
+# What is Daph App
+
+A simple project to display a motivational message for those you care about
+
+# Creator
+
+Jesus Niño Eusse
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
