@@ -14,15 +14,16 @@
   flex-direction: column;
   min-height: 100vh;
   justify-content: space-around;
-  width: 100vw;
+  width: 100%;
   &__item {
     color: $primary;
     font-family: Italianno;
     font-size: 5rem;
     margin: auto;
+    padding: 0 2rem;
     text-align: center;
-    width: 100%;
-    text-shadow: $primary-hover;
+    text-shadow: -1rem 1rem 1rem $primary-hover;
+    flex-wrap: nowrap;
 
     @include media-breakpoint-down($screen-sm-min) {
       font-size: 3rem;
