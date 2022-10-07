@@ -1,16 +1,29 @@
 import './sass/app.scss'
-import FullCard from './FullCard'
-import { messages } from './data/messages'
-import moment from 'moment'
+import { RouterProvider, createBrowserRouter, redirect } from 'react-router-dom'
 import 'moment/locale/es'
+import { Home } from './routes/Home'
+import { Message } from './routes/Message'
 
 function App() {
-  const date = moment().format('LLLL')
-  const dayOfTheYear = moment().dayOfYear()
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Home />
+    },
+    {
+      path: 'un-mensaje-para-ti/:messageId',
+      loader: ({ params }) => ({ messageId: params.messageId }),
+      element: <Message />
+    },
+    {
+      path: '*',
+      loader: () => redirect('/')
+    }
+  ])
 
   return (
     <div className="App">
-      <FullCard message={messages[dayOfTheYear]} date={date}></FullCard>
+      <RouterProvider router={router} />
     </div>
   )
 }
