@@ -1,10 +1,10 @@
 type Props = {
   message: string
-  date?: string
+  date: string
 }
 
 const FullCard = ({
-  message = 'Un mensaje especial espera por tí.',
+  message = 'Un mensaje especíal espera por ti. Nos vemos pronto',
   date
 }: Props) => {
   return (
