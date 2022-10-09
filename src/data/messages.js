@@ -1,5 +1,17 @@
 export const messages = [
     'Algo asombroso está por crearse, espera por lo que vendrá y la espera valdrá la pena',
     'Un día a la vez quiero vivir junto a tí, sin prisas y sin pausas. Porque quiero vivir cada uno como si fuera el último pero con la esperanza de que durará para siempre',
-    'Siento mucho lo que pasó y estoy muy arrepentido, este tiempo me ha servido para pensar bien las cosas y para darme cuenta de lo q tengo. Por supuesto, ojalá no fuese sido así, la cagué horrible.\n Pero estoy haciendo todo lo posible por enmendar mi error, todo lo q pueda lo haré para recuperar a Daphne. Mas allá de mi testarudez, no estoy del todo bien y voy a tratarlo con un experto, con esto no quiero excusarme, la verdad soy culpable de todo el daño.\n Tengo mucha vergüenza con ustedes también, no sé ni cómo decir lo siento, no puedo regresar el tiempo y volver a empezar pero si puedo hacer las cosas mejor y estoy muy enfocado en eso. Demostraré que aprendo de mis errores y q no los volveré a cometer jamás.\n Amo a Daphne muchísimo más allá de mi error y espero no sea tarde para recuperarla.\n Yo sé q es difícil confiar en mi de nuevo, así que Eve, Marc solo quiero q sepan q estaré allí con ella de nuevo, la trataré mejor, le demostraré q la amo sin miedo a enamorarme más de ella. Le desmostraré q estoy dispuesto a todo.\n Quisiera decirles mucho más pero la pana y la vergüenza no me dejan.'
+    'Siempre he pensado que hay gente que deja una marca imborrable en el alma, una huella que nunca puede ser borrada.',
+    'Esa sonrisa perversa que tienes cuando me ves con lujuria. Ojalá que siempre sea así.',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
 ]
