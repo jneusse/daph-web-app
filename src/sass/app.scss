@@ -1,9 +1,11 @@
 @import './variables';
 @import './utils';
 @import url('https://fonts.googleapis.com/css?family=Italianno');
-
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans');
 .App {
   background-color: $black;
+  font-family: 'Ropa Sans';
+  font-size: 24px;
 }
 
 .full-card {
@@ -14,7 +16,7 @@
   flex-direction: column;
   min-height: 100vh;
   justify-content: center;
-  width: 100%;
+  max-width: 100%;
   &__item {
     color: $primary;
     font-family: Italianno;
@@ -60,4 +62,92 @@ span.time {
 }
 .align-text-center {
   text-align: center;
+}
+
+dialog {
+  background-color: $black;
+  border: 2px solid $primary;
+  border-radius: 8px;
+  color: $primary;
+  &::backdrop {
+    background: $black;
+    opacity: 0.8;
+  }
+}
+
+button {
+  color: $primary;
+  background-color: $black;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    color: $primary-hover;
+    border-color: $primary-hover;
+    box-shadow: 0 0 8px $primary;
+  }
+  margin: 0 8px;
+
+  &.rounded {
+    border-radius: 50%;
+  }
+  &.button-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    border-radius: 50%;
+    border: 2px solid $primary;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.border-primary {
+  border: 2px solid $primary;
+  border-radius: 4px;
+}
+
+label {
+  color: $primary;
+  margin: ($spacer * 2) 0 0 0;
+  font-family: 'Ropa Sans';
+  font-size: 24px;
+  display: block;
+}
+
+input {
+  color: $primary;
+  display: block;
+  font-size: 24px;
+  background-color: $black;
+  outline: none;
+  font-family: 'Ropa Sans';
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 8px $primary;
+  }
+  &:invalid {
+    border-color: red;
+  }
+}
+
+textarea {
+  color: $primary;
+  font-size: 24px;
+  display: block;
+  background-color: $black;
+  font-family: 'Ropa Sans';
+  outline: none;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 8px $primary;
+  }
+  &:invalid {
+    border-color: red;
+  }
+}
+
+span.form-error {
+  font-size: 24px;
+  font-family: 'Ropa Sans';
+  color: $primary;
 }
