@@ -2,7 +2,7 @@ export const messages = [
     'Algo asombroso está por crearse, espera por lo que vendrá y la espera valdrá la pena',
     'Un día a la vez quiero vivir junto a tí, sin prisas y sin pausas. Porque quiero vivir cada uno como si fuera el último pero con la esperanza de que durará para siempre',
     'Siempre he pensado que hay gente que deja una marca imborrable en el alma, una huella que nunca puede ser borrada.',
-    'Esa sonrisa perversa que tienes cuando me ves con lujuria. Ojalá que siempre sea así.',
+    'Esa sonrisa perversa que tienes cuando me ves con lujuria. Ojalá nunca se vaya.',
     '',
     '',
     '',

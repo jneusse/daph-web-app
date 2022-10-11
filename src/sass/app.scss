@@ -2,6 +2,8 @@
 @import './utils';
 @import url('https://fonts.googleapis.com/css?family=Italianno');
 @import url('https://fonts.googleapis.com/css?family=Ropa+Sans');
+@import url('https://fonts.googleapis.com/css?family=Loved+by+the+King');
+@import url('https://fonts.googleapis.com/css?family=Kalam');
 .App {
   background-color: $black;
   font-family: 'Ropa Sans';
@@ -19,7 +21,7 @@
   max-width: 100%;
   &__item {
     color: $primary;
-    font-family: Italianno;
+    font-family: 'Kalam';
     font-size: 5rem;
     padding: 0 2rem;
     text-align: center;
@@ -150,4 +152,12 @@ span.form-error {
   font-size: 24px;
   font-family: 'Ropa Sans';
   color: $primary;
+}
+
+select {
+  color: $primary;
+  outline: none;
+  background-color: $black;
+  font-size: 24px;
+  width: 100%;
 }

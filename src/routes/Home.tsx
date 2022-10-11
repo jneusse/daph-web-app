@@ -6,43 +6,43 @@ import { useState } from 'react'
 import FloatButton from '../components/BottomButon'
 import FormCreateMessage from '../components/FormCreateMessage'
 
+export type MsgDataType = {
+  message: string
+  fontFamily: string
+}
+
 export const Home = () => {
   const [open, setOpen] = useState(false)
   const date = moment().format('LLLL')
   const dayOfTheYear = moment().dayOfYear()
-  const [message, setMessage] = useState(messages[dayOfTheYear])
+  const [msgData, setMsgData] = useState<MsgDataType>({
+    message: messages[dayOfTheYear],
+    fontFamily: 'Italianno'
+  })
 
   const openModal = () => setOpen(true)
   const closeModal = () => setOpen(false)
 
-  const onMsgChange = (msg) => {
-    setMessage(msg)
+  const onMsgChange = (data: MsgDataType) => {
+    setMsgData(data)
     closeModal()
   }
 
   return (
     <>
-      <FullCard message={message} date={date}></FullCard>
+      <FullCard
+        message={msgData.message}
+        fontFamily={msgData.fontFamily}
+        date={date}
+      ></FullCard>
       <Dialog isOpen={open} onClose={() => setOpen(false)}>
         <section className="p-1">Crea tu mensaje</section>
         <section className="p-1">
-          <FormCreateMessage onMsgChange={onMsgChange} />
+          <FormCreateMessage
+            onMsgChange={onMsgChange}
+            fontFamily={msgData.fontFamily}
+          />
         </section>
-        <menu>
-          {/* <button
-            className="border-primary px-2 py-1"
-            onClick={() => setOpen(false)}
-          >
-            Cancelar
-          </button>
-
-          <button
-            className="border-primary px-2 py-1"
-            onClick={() => setOpen(false)}
-          >
-            Guardar
-          </button> */}
-        </menu>
       </Dialog>
       <FloatButton onClick={openModal} />
     </>
