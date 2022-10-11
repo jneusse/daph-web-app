@@ -1,22 +1,30 @@
+import { useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
+import { MsgDataType } from '../routes/Home'
 
 type Inputs = {
   message: string
+  fontFamily: string
 }
 
 type Props = {
-  onMsgChange: (msg: string) => void
+  onMsgChange: (data: MsgDataType) => void
+  fontFamily: string
 }
 
-const FormCreateMessage = ({ onMsgChange }: Props) => {
+const FormCreateMessage = ({ onMsgChange, fontFamily }: Props) => {
+  const [currentFont, setCurrentFont] = useState(fontFamily)
   const {
     register,
     handleSubmit,
     formState: { errors }
   } = useForm<Inputs>()
+
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    onMsgChange(data.message)
+    onMsgChange(data)
   }
+
+  const fonts = ['Open Sans', 'Italianno', 'Kalam', 'Loved by the King']
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -36,9 +44,27 @@ const FormCreateMessage = ({ onMsgChange }: Props) => {
       {errors.message?.type === 'minLength' && (
         <span className="form-error">mínimo 6 caracteres</span>
       )}
+      <label>font</label>
+      <select
+        defaultValue={fontFamily}
+        {...register('fontFamily', {
+          required: true,
+          onChange: (e) => {
+            setCurrentFont(e.target.value)
+          }
+        })}
+        style={{ fontFamily: currentFont }}
+        className="border-primary"
+      >
+        {fonts.map((option, key) => (
+          <option key={key} value={option} style={{ fontFamily: option }}>
+            {option}
+          </option>
+        ))}
+      </select>
       <input
         type="submit"
-        className="border-primary mt-1"
+        className="border-primary mt-2"
         value="Guardar"
         style={{ marginLeft: 'auto' }}
       />
