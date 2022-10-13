@@ -288,7 +288,7 @@ export const messages = [
     'Hoy desperté feliz de saber que estamos juntos',
     'Esa sonrisa perversa que tienes cuando me ves con lujuria. Ojalá nunca se vaya',
     'Recuerda que te amo, no importa la situación',
-    'Mírama con lujuria y serás correspondida',
+    'Mírame con lujuria y serás correspondida',
     'Amo tus curvas y cada centimetro de tu cuerpo',
     'Tu sonrisa me enamora cada que la veo en tus fotos',
     'Quiero crecer junto a tí, y satisfacerte cada que pueda',
