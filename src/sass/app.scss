@@ -54,6 +54,7 @@ span.time {
   font-size: 2rem;
   font-weight: bold;
   text-shadow: none;
+  cursor: pointer;
 }
 
 .align-text-left {
@@ -82,6 +83,11 @@ button {
   background-color: $black;
   cursor: pointer;
   transition: all 0.5s;
+  color: $primary;
+  font-size: 24px;
+  background-color: $black;
+  font-family: 'Ropa Sans';
+
   &:hover {
     color: $primary-hover;
     border-color: $primary-hover;
@@ -130,6 +136,9 @@ input {
   &:invalid {
     border-color: red;
   }
+  &.submit {
+    cursor: pointer;
+  }
 }
 
 textarea {
@@ -160,4 +169,10 @@ select {
   background-color: $black;
   font-size: 24px;
   width: 100%;
+}
+
+menu.actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
 }

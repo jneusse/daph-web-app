@@ -10,9 +10,10 @@ type Inputs = {
 type Props = {
   onMsgChange: (data: MsgDataType) => void
   fontFamily: string
+  onClose: () => void
 }
 
-const FormCreateMessage = ({ onMsgChange, fontFamily }: Props) => {
+const FormCreateMessage = ({ onMsgChange, fontFamily, onClose }: Props) => {
   const [currentFont, setCurrentFont] = useState(fontFamily)
   const {
     register,
@@ -62,12 +63,23 @@ const FormCreateMessage = ({ onMsgChange, fontFamily }: Props) => {
           </option>
         ))}
       </select>
-      <input
-        type="submit"
-        className="border-primary mt-2"
-        value="Guardar"
-        style={{ marginLeft: 'auto' }}
-      />
+
+      <menu className="actions">
+        <button
+          type="submit"
+          className="border-primary mt-2"
+          style={{ marginRight: 'auto' }}
+          onClick={onClose}
+        >
+          Cancelar
+        </button>
+        <input
+          type="submit"
+          className="border-primary mt-2 submit"
+          value="Guardar"
+          style={{ marginLeft: 'auto' }}
+        />
+      </menu>
     </form>
   )
 }

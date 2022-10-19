@@ -34,6 +34,7 @@ export const Home = () => {
         message={msgData.message}
         fontFamily={msgData.fontFamily}
         date={date}
+        onClick={openModal}
       ></FullCard>
       <Dialog isOpen={open} onClose={() => setOpen(false)}>
         <section className="p-1">Crea tu mensaje</section>
@@ -41,10 +42,10 @@ export const Home = () => {
           <FormCreateMessage
             onMsgChange={onMsgChange}
             fontFamily={msgData.fontFamily}
+            onClose={closeModal}
           />
         </section>
       </Dialog>
-      <FloatButton onClick={openModal} />
     </>
   )
 }
