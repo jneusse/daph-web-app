@@ -3,7 +3,6 @@ import FullCard from '../FullCard'
 import { messages } from '../data/messages'
 import Dialog from '../components/Dialog'
 import { useState } from 'react'
-import FloatButton from '../components/BottomButon'
 import FormCreateMessage from '../components/FormCreateMessage'
 
 export type MsgDataType = {
