@@ -292,4 +292,11 @@ export const messages = [
     'Amo tus curvas y cada centimetro de tu cuerpo',
     'Tu sonrisa me enamora cada que la veo en tus fotos',
     'Quiero crecer junto a tí, y satisfacerte cada que pueda',
+    'Hoy es el día en que me regalarás un nude',
+    'Juntos somos mas fuertes, juntos somos mas felices, juntos quiero que permanezcamos',
+    'Si se me agotan las palabras, inventaré unas nuevas para expresar cuanto te quiero. TQCAB',
+    'Te amo',
+    'Deseo besar cada parte de tu cuerpo, es tan fascinante',
+    'Recuerdame que hoy te extraño, no importa donde estés',
+    'Sonríe, que no necesitas a nadie para ser feliz. Lo tienes todo y me tienes a mi'
 ]
