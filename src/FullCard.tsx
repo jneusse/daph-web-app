@@ -14,7 +14,7 @@ const FullCard = ({
   return (
     <div className="full-card">
       <div className="full-card__item" style={{ fontFamily: fontFamily }}>
-        {message}
+        {message.trim()}
       </div>
       {date && (
         <div className="full-card__item align-text-right">
