@@ -1,6 +1,6 @@
 {
-  "short_name": "Daph App",
-  "name": "Daph App for lovers",
+  "short_name": "DAPh App",
+  "name": "DAPh App, frases asombrosas todos los días",
   "icons": [
     {
       "src": "/android-icon-36x36.png",
@@ -39,8 +39,8 @@
       "density": "4.0"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#000000"
 }

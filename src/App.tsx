@@ -1,14 +1,17 @@
 import './sass/app.scss'
 import { RouterProvider, createBrowserRouter, redirect } from 'react-router-dom'
 import 'moment/locale/es'
-import { Home } from './routes/Home'
-import { Message } from './routes/Message'
+import { Home, Message, MyLove } from './routes'
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '/',
       element: <Home />
+    },
+    {
+      path: '/para-mi-amor',
+      element: <MyLove />
     },
     {
       path: 'un-mensaje-para-ti/:messageId',
