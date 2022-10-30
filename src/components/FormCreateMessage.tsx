@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useForm, SubmitHandler } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import { MsgDataType } from '../routes/Home'
 
 type Inputs = {
@@ -24,7 +24,6 @@ const FormCreateMessage = ({
   const [currentFont, setCurrentFont] = useState(fontFamily)
   const {
     register,
-    reset,
     formState: { errors }
   } = useForm<Inputs>()
 
