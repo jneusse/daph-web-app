@@ -39,6 +39,7 @@ export const Home = () => {
         <section className="p-1">Crea tu mensaje</section>
         <section className="p-1">
           <FormCreateMessage
+            msg={msgData.message}
             onMsgChange={onMsgChange}
             fontFamily={msgData.fontFamily}
             onClose={closeModal}
