@@ -20,6 +20,7 @@
   justify-content: center;
   max-width: 100%;
   &__item {
+    line-height: 1.2em;
     color: $primary;
     font-family: 'Kalam';
     font-size: 5rem;
@@ -44,14 +45,14 @@
       font-size: 3rem;
     }
     @include media-breakpoint-down($screen-md-min) {
-      font-size: 4rem;
+      font-size: 3rem;
     }
   }
 }
 
 span.time {
   color: $primary;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
   text-shadow: none;
   cursor: pointer;
@@ -160,7 +161,7 @@ textarea {
 span.form-error {
   font-size: 24px;
   font-family: 'Ropa Sans';
-  color: $primary;
+  color: red;
 }
 
 select {

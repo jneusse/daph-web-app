@@ -303,5 +303,11 @@ export const messages = [
     'Haremos el amor como si fuera la primera vez, hoy, mañana o no importa el momento',
     'El destino de nuestros labios es encontrarse... ¿para qué alargarlo más?',
     'No puedo recordar donde estabamos hace un año, pero si puedo soñar donde estaremos en próximo. ¡Juntos!',
-    '¡Preguntame algo! hoy te responderé lo que quieras con un si'
+    '¡Preguntame algo! hoy te responderé lo que quieras con un si',
+    'Cual es el color de la ropa interior que usas hoy',
+    'No importa donde estes, voy a respetarte y darte tu lugar',
+    'Me complace verte feliz con las pequeñeces que te doy',
+    'Quiero verte hoy más feliz que ayer',
+    'Baby mandame un kiss, que me gustan tu labios',
+    ''
 ]
