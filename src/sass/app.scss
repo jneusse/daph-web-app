@@ -1,13 +1,17 @@
 @import './variables';
 @import './utils';
+@import './charlandito';
+
 @import url('https://fonts.googleapis.com/css?family=Italianno');
 @import url('https://fonts.googleapis.com/css?family=Ropa+Sans');
 @import url('https://fonts.googleapis.com/css?family=Loved+by+the+King');
 @import url('https://fonts.googleapis.com/css?family=Kalam');
+
 .App {
   background-color: $black;
   font-family: 'Ropa Sans';
   font-size: 24px;
+  min-height: 100vh;
 }
 
 .full-card {

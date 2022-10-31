@@ -28,7 +28,10 @@ const FormCreateMessage = ({
   } = useForm<Inputs>()
 
   const onSubmit = () => {
-    onMsgChange({ message: currentMsg || '', fontFamily: currentFont })
+    onMsgChange({
+      message: currentMsg?.replace(/\r?\n/g, '<br />').trim() || '',
+      fontFamily: currentFont
+    })
   }
 
   const fonts = ['Open Sans', 'Italianno', 'Kalam', 'Loved by the King']

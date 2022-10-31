@@ -4,6 +4,8 @@ import { messages } from '../data/forMylove'
 import Dialog from '../components/Dialog'
 import { useState } from 'react'
 import FormCreateMessage from '../components/FormCreateMessage'
+import { Helmet } from 'react-helmet'
+import { config } from '../config/config'
 
 export type MsgDataType = {
   message: string
@@ -29,6 +31,12 @@ export const MyLove = () => {
 
   return (
     <>
+      <Helmet>
+        <link
+          rel="canonical"
+          href={`${config.DAPHAPP_ENDPOINT}/para-mi-amor`}
+        />
+      </Helmet>
       <FullCard
         message={msgData.message}
         fontFamily={msgData.fontFamily}
