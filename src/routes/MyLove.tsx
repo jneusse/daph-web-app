@@ -36,6 +36,16 @@ export const MyLove = () => {
           rel="canonical"
           href={`${config.DAPHAPP_ENDPOINT}/para-mi-amor`}
         />
+        <meta property="og:title" content="Para mi amor" />
+        <meta property="og:type" content="profile" />
+        <meta
+          property="og:url"
+          content={`${config.DAPHAPP_ENDPOINT}/para-mi-amor`}
+        />
+        <meta
+          property="og:image"
+          content={`${config.DAPHAPP_ENDPOINT}/logo192.png`}
+        />
       </Helmet>
       <FullCard
         message={msgData.message}
