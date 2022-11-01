@@ -66,8 +66,12 @@ export const Charlandito = () => {
           </section>
         </Dialog>
         <menu className="actions">
-          <button onClick={handleCaptureClick}>Download</button>
-          <button onClick={() => setOpen(true)}>Create Mensaje</button>
+          <button className="border-primary" onClick={handleCaptureClick}>
+            Descargar
+          </button>
+          <button className="border-primary" onClick={() => setOpen(true)}>
+            Crear mensaje
+          </button>
         </menu>
       </div>
     </>
