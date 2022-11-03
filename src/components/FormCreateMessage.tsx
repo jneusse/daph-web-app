@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { MsgDataType } from '../routes/Home'
+import { MsgDataType } from '../types'
 
 type Inputs = {
   message: string
