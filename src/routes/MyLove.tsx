@@ -4,8 +4,7 @@ import { messages } from '../data/forMylove'
 import Dialog from '../components/Dialog'
 import { useState } from 'react'
 import FormCreateMessage from '../components/FormCreateMessage'
-import { Helmet } from 'react-helmet'
-import { config } from '../config/config'
+import { DownloadableImage } from '../components/Downloadable'
 
 export type MsgDataType = {
   message: string
@@ -16,7 +15,7 @@ export const MyLove = () => {
   const [open, setOpen] = useState(false)
   const date = moment().format('LLLL')
   const dayOfTheYear = moment().dayOfYear()
-  const [msgData, setMsgData] = useState<MsgDataType>({
+  const [messageData, setMessageData] = useState<MsgDataType>({
     message: messages[dayOfTheYear],
     fontFamily: 'Kalam'
   })
@@ -25,31 +24,15 @@ export const MyLove = () => {
   const closeModal = () => setOpen(false)
 
   const onMsgChange = (data: MsgDataType) => {
-    setMsgData(data)
+    setMessageData(data)
     closeModal()
   }
 
   return (
     <>
-      <Helmet>
-        <link
-          rel="canonical"
-          href={`${config.DAPHAPP_ENDPOINT}/para-mi-amor`}
-        />
-        <meta property="og:title" content="Para mi amor" />
-        <meta property="og:type" content="profile" />
-        <meta
-          property="og:url"
-          content={`${config.DAPHAPP_ENDPOINT}/para-mi-amor`}
-        />
-        <meta
-          property="og:image"
-          content={`${config.DAPHAPP_ENDPOINT}/logo192.png`}
-        />
-      </Helmet>
       <FullCard
-        message={msgData.message}
-        fontFamily={msgData.fontFamily}
+        message={messageData.message}
+        fontFamily={messageData.fontFamily}
         date={date}
         onClick={openModal}
       ></FullCard>
@@ -57,13 +40,18 @@ export const MyLove = () => {
         <section className="p-1">Crea tu mensaje</section>
         <section className="p-1">
           <FormCreateMessage
-            msg={msgData.message}
+            data={messageData}
             onMsgChange={onMsgChange}
-            fontFamily={msgData.fontFamily}
             onClose={closeModal}
           />
         </section>
       </Dialog>
+      <menu className="actions my-2">
+        <DownloadableImage messageData={messageData} />
+        <button className="border-primary" onClick={() => setOpen(true)}>
+          Crear mensaje
+        </button>
+      </menu>
     </>
   )
 }

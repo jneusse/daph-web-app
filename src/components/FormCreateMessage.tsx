@@ -1,27 +1,25 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { MsgDataType } from '../routes/Home'
+import { MsgDataType } from '../types'
 
 type Inputs = {
   message: string
   fontFamily: string
+  bgColor: string
 }
 
 type Props = {
-  msg?: string
+  data: MsgDataType
   onMsgChange: (data: MsgDataType) => void
-  fontFamily: string
   onClose: () => void
 }
 
-const FormCreateMessage = ({
-  msg,
-  onMsgChange,
-  fontFamily,
-  onClose
-}: Props) => {
-  const [currentMsg, setCurrentMsg] = useState(msg)
-  const [currentFont, setCurrentFont] = useState(fontFamily)
+const FormCreateMessage = ({ data, onMsgChange, onClose }: Props) => {
+  const [currentMsg, setCurrentMsg] = useState(data.message)
+  const [currentFont, setCurrentFont] = useState(data.fontFamily)
+  const [currentBgColor, setCurrentBgColor] = useState(
+    data.bgColor || '#000000'
+  )
   const {
     register,
     formState: { errors }
@@ -30,11 +28,20 @@ const FormCreateMessage = ({
   const onSubmit = () => {
     onMsgChange({
       message: currentMsg?.replace(/\r?\n/g, '<br />').trim() || '',
-      fontFamily: currentFont
+      fontFamily: currentFont,
+      bgColor: currentBgColor
     })
   }
 
-  const fonts = ['Open Sans', 'Italianno', 'Kalam', 'Loved by the King']
+  const fonts = [
+    'Open Sans',
+    'Italianno',
+    'Kalam',
+    'Loved by the King',
+    'Myriad Pro Condensed',
+    'Century Gothic',
+    'Century Gothic Condensed'
+  ]
 
   return (
     <>
@@ -62,7 +69,7 @@ const FormCreateMessage = ({
         )}
         <label>font</label>
         <select
-          defaultValue={fontFamily}
+          defaultValue={data.fontFamily}
           {...register('fontFamily', {
             required: true,
             onChange: (e) => {
@@ -77,6 +84,24 @@ const FormCreateMessage = ({
               {option}
             </option>
           ))}
+        </select>
+        <label>Fondo</label>
+        <select
+          defaultValue={'#000000'}
+          {...register('bgColor', {
+            required: true,
+            onChange: (e) => {
+              setCurrentBgColor(e.target.value)
+            }
+          })}
+          className="border-primary"
+        >
+          <option key={'#000000'} value={'#000000'}>
+            Negro
+          </option>
+          <option key={'#FFFFFF'} value={'#FFFFFF'}>
+            Blanco
+          </option>
         </select>
       </form>
       <menu className="actions">

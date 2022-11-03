@@ -1,5 +1,6 @@
 @import './variables';
 @import './utils';
+@import './fonts';
 @import './charlandito';
 
 @import url('https://fonts.googleapis.com/css?family=Italianno');
@@ -180,4 +181,34 @@ menu.actions {
   display: flex;
   justify-content: space-between;
   padding: 0;
+  max-width: 600px;
+  margin: auto;
+}
+
+.container-downloable-card {
+  align-items: center;
+  aspect-ratio: 1/1;
+  background-color: $black;
+  border: 8px solid $primary;
+  box-sizing: border-box;
+  color: $primary;
+  display: flex;
+  font-size: 3rem;
+  line-height: 3rem;
+  flex-direction: column;
+  height: 600px;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  @include media-breakpoint-down($screen-md-min) {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    height: 300px;
+  }
+}
+
+.card-hidden {
+  z-index: -1000;
+  position: absolute;
+  top: 0;
 }
