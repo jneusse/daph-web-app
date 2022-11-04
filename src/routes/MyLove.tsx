@@ -5,11 +5,7 @@ import Dialog from '../components/Dialog'
 import { useState } from 'react'
 import FormCreateMessage from '../components/FormCreateMessage'
 import { DownloadableImage } from '../components/Downloadable'
-
-export type MsgDataType = {
-  message: string
-  fontFamily: string
-}
+import { MsgDataType } from '../types'
 
 export const MyLove = () => {
   const [open, setOpen] = useState(false)
@@ -17,7 +13,8 @@ export const MyLove = () => {
   const dayOfTheYear = moment().dayOfYear()
   const [messageData, setMessageData] = useState<MsgDataType>({
     message: messages[dayOfTheYear],
-    fontFamily: 'Kalam'
+    fontFamily: 'Kalam',
+    bgColor: '#OOOOOO'
   })
 
   const openModal = () => setOpen(true)
@@ -31,6 +28,7 @@ export const MyLove = () => {
   return (
     <>
       <FullCard
+        bgColor={messageData.bgColor}
         message={messageData.message}
         fontFamily={messageData.fontFamily}
         date={date}
