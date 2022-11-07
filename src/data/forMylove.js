@@ -309,5 +309,16 @@ export const messages = [
     'Me complace verte feliz con las pequeñeces que te doy',
     'Quiero verte hoy más feliz que ayer',
     'Baby mandame un kiss, que me gustan tu labios',
-    ''
-]
+    'Un arcoíris no puede emitir mas colores que los que tú en este día',
+    'Si sumas los días en que no te dije te amo, recuerda que hay días que te lo digo y valen por mil',
+    'Si has tenido un mal día, tal vez yo no puedo arreglarlo. Pero recuerda que tienes el resto del días',
+    'Dime un cumplido, es tu turno',
+    'Si vos querés tener el mundo a tus pies, recuerda que yo estoy de primero',
+    'Caeré rendido ante tu seducción con lencería erótica cada que la uses',
+    'No importa cuantas otras mire, ya sabes que nunca encontraré en otras lo que hallé en tí',
+    'Mándame un GIF sexy',
+    'Nadie es perfecto y tampoco las parejas son perfectas, pero lo importante y lo que cuenta es que vamos a ser mejor cada día',
+    'Si ves este mensaje y no he muerto, debemos hacer un trio MHM :-)',
+    'Aunque la cosa se ponda difícil aprenderemos a superar los obstáculos',
+    'Esas caderas anchas apretadas con mis manos, ay dios mio que rico'
+] 
