@@ -14,21 +14,23 @@ const FullCard = ({
   bgColor = '#000000'
 }: Props) => {
   return (
-    <div className="full-card" style={{ backgroundColor: bgColor }}>
-      <div className="full-card__item" style={{ fontFamily: fontFamily }}>
-        {message.trim()}
-      </div>
-      {date && (
-        <div className="full-card__item align-text-right">
-          <span
-            className="time"
-            style={{ fontFamily: fontFamily }}
-            onClick={onClick}
-          >
-            {date}
-          </span>
+    <div className="full-size">
+      <div className="full-card" style={{ backgroundColor: bgColor }}>
+        <div className="full-card__item" style={{ fontFamily: fontFamily }}>
+          {message.trim()}
         </div>
-      )}
+        {date && (
+          <div className="full-card__item align-text-right">
+            <span
+              className="time"
+              style={{ fontFamily: fontFamily }}
+              onClick={onClick}
+            >
+              {date}
+            </span>
+          </div>
+        )}
+      </div>
     </div>
   )
 }
