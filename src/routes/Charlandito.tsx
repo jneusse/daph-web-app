@@ -48,7 +48,7 @@ export const Charlandito = () => {
             />
           </section>
         </Dialog>
-        <menu className="actions">
+        <menu className="actions mt-2">
           <DownloadableImage messageData={messageData} />
           <button className="border-primary" onClick={() => setOpen(true)}>
             Crear mensaje

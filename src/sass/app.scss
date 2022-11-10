@@ -15,20 +15,29 @@
   min-height: 100vh;
 }
 
+.full-size {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0;
+}
+
 .full-card {
   background-color: $black;
   border: 1rem solid $primary;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 600px;
   justify-content: center;
-  max-width: 100%;
+  width: 600px;
   &__item {
     line-height: 1.2em;
     color: $primary;
     font-family: 'Kalam';
-    font-size: 5rem;
+    font-size: 3rem;
     padding: 0 2rem;
     text-align: center;
     text-shadow: -1rem 1rem 1rem $primary-hover;
@@ -46,12 +55,22 @@
       }
     }
 
-    @include media-breakpoint-down($screen-sm-min) {
-      font-size: 3rem;
+    @include media-breakpoint-down(625px) {
+      font-size: 2rem;
     }
-    @include media-breakpoint-down($screen-md-min) {
-      font-size: 3rem;
+    @include media-breakpoint-down(425px) {
+      font-size: 1.5rem;
     }
+  }
+  @include media-breakpoint-down(625px) {
+    height: 400px;
+    justify-content: center;
+    width: 400px;
+  }
+  @include media-breakpoint-down(425px) {
+    height: 300px;
+    justify-content: center;
+    width: 300px;
   }
 }
 
@@ -183,6 +202,12 @@ menu.actions {
   padding: 0;
   max-width: 600px;
   margin: auto;
+  @include media-breakpoint-down(625px) {
+    max-width: 400px;
+  }
+  @include media-breakpoint-down(425px) {
+    max-width: 300px;
+  }
 }
 
 .container-downloable-card {
