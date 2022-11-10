@@ -80,6 +80,9 @@ span.time {
   font-weight: bold;
   text-shadow: none;
   cursor: pointer;
+  @include media-breakpoint-down(425px) {
+    font-size: 0.5rem;
+  }
 }
 
 .align-text-left {
