@@ -10,5 +10,10 @@ type MessageType = {
 export const Message = () => {
   const date = moment().format('LLLL')
   const { messageId } = useLoaderData() as MessageType
-  return <FullCard message={messages[messageId]} date={date}></FullCard>
+  return (
+    <FullCard
+      messageData={{ message: messages[messageId] }}
+      date={date}
+    ></FullCard>
+  )
 }

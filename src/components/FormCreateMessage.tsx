@@ -6,6 +6,7 @@ type Inputs = {
   message: string
   fontFamily: string
   bgColor: string
+  color: string
 }
 
 type Props = {
@@ -20,6 +21,7 @@ const FormCreateMessage = ({ data, onMsgChange, onClose }: Props) => {
   const [currentBgColor, setCurrentBgColor] = useState(
     data.bgColor || '#000000'
   )
+  const [currentColor, setCurrentColor] = useState(data.color || '#f5821f')
   const {
     register,
     formState: { errors }
@@ -29,7 +31,8 @@ const FormCreateMessage = ({ data, onMsgChange, onClose }: Props) => {
     onMsgChange({
       message: currentMsg?.replace(/\r?\n/g, '<br />').trim() || '',
       fontFamily: currentFont,
-      bgColor: currentBgColor
+      bgColor: currentBgColor,
+      color: currentColor
     })
   }
 
@@ -46,7 +49,7 @@ const FormCreateMessage = ({ data, onMsgChange, onClose }: Props) => {
   return (
     <>
       <form>
-        <label>mensaje</label>
+        <label>Mensaje</label>
         <textarea
           rows={8}
           className="border-primary"
@@ -67,7 +70,7 @@ const FormCreateMessage = ({ data, onMsgChange, onClose }: Props) => {
         {errors.message?.type === 'maxLength' && (
           <span className="form-error">máximo 160 caracteres</span>
         )}
-        <label>font</label>
+        <label>Fuente</label>
         <select
           defaultValue={data.fontFamily}
           {...register('fontFamily', {
@@ -85,9 +88,22 @@ const FormCreateMessage = ({ data, onMsgChange, onClose }: Props) => {
             </option>
           ))}
         </select>
+        <label>Color</label>
+        <input
+          type="color"
+          defaultValue={currentColor}
+          {...register('color', {
+            required: true,
+            onChange: (e) => {
+              setCurrentColor(e.target.value)
+            }
+          })}
+          className="border-primary"
+        />
         <label>Fondo</label>
-        <select
-          defaultValue={'#000000'}
+        <input
+          type="color"
+          defaultValue={currentBgColor}
           {...register('bgColor', {
             required: true,
             onChange: (e) => {
@@ -95,14 +111,7 @@ const FormCreateMessage = ({ data, onMsgChange, onClose }: Props) => {
             }
           })}
           className="border-primary"
-        >
-          <option key={'#000000'} value={'#000000'}>
-            Negro
-          </option>
-          <option key={'#FFFFFF'} value={'#FFFFFF'}>
-            Blanco
-          </option>
-        </select>
+        />
       </form>
       <menu className="actions">
         <button
