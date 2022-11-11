@@ -48,10 +48,10 @@
 
     @keyframes text-shadow {
       from {
-        text-shadow: 1rem -1rem 1rem $primary-hover;
+        text-shadow: 1rem -1rem 1rem;
       }
       to {
-        text-shadow: -1rem 1rem 1rem $primary-hover;
+        text-shadow: -1rem 1rem 1rem;
       }
     }
 
@@ -100,10 +100,15 @@ dialog {
   border: 2px solid $primary;
   border-radius: 8px;
   color: $primary;
+  width: 300px;
   &::backdrop {
     background: $black;
     opacity: 0.8;
   }
+}
+
+textarea {
+  width: 100%;
 }
 
 button {
@@ -157,6 +162,7 @@ input {
   background-color: $black;
   outline: none;
   font-family: 'Ropa Sans';
+  width: 100%;
   &:focus {
     outline: none;
     box-shadow: 0 0 8px $primary;

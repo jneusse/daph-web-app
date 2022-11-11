@@ -28,9 +28,7 @@ export const MyLove = () => {
   return (
     <>
       <FullCard
-        bgColor={messageData.bgColor}
-        message={messageData.message}
-        fontFamily={messageData.fontFamily}
+        messageData={messageData}
         date={date}
         onClick={openModal}
       ></FullCard>

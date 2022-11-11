@@ -28,11 +28,9 @@ export const Home = () => {
   return (
     <>
       <FullCard
-        message={messageData.message}
-        fontFamily={messageData.fontFamily}
+        messageData={messageData}
         date={date}
         onClick={openModal}
-        bgColor={messageData.bgColor}
       ></FullCard>
       <Dialog isOpen={open} onClose={() => setOpen(false)}>
         <section className="p-1">Crea tu mensaje</section>
