@@ -24,7 +24,10 @@ export const DownloadableImage = ({
         <section
           className="container-downloable-card"
           ref={content}
-          style={{ backgroundColor: messageData.bgColor }}
+          style={{
+            backgroundColor: messageData.bgColor,
+            borderColor: messageData.color
+          }}
         >
           <p
             dangerouslySetInnerHTML={{ __html: messageData.message }}
