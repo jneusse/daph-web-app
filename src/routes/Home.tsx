@@ -1,20 +1,21 @@
 import moment from 'moment'
-import FullCard from '../FullCard'
+import FullCard from '../components/FullCard'
 import { messages } from '../data/messages'
 import Dialog from '../components/Dialog'
 import { useState } from 'react'
 import FormCreateMessage from '../components/FormCreateMessage'
 import { MsgDataType } from '../types'
 import { DownloadableImage } from '../components/Downloadable'
+import { theme } from '../config/theme'
 
 export const Home = () => {
   const [open, setOpen] = useState(false)
-  const date = moment().format('LLLL')
+  const date = moment().format('LL')
   const dayOfTheYear = moment().dayOfYear()
   const [messageData, setMessageData] = useState<MsgDataType>({
     message: messages[dayOfTheYear],
-    fontFamily: 'Italianno',
-    bgColor: '#000000'
+    fontFamily: theme.fonts[4],
+    bgColor: theme.colors.backgroundColor
   })
 
   const openModal = () => setOpen(true)

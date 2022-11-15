@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { theme } from '../config/theme'
 import { MsgDataType } from '../types'
 
 type Inputs = {
@@ -19,9 +20,11 @@ const FormCreateMessage = ({ data, onMsgChange, onClose }: Props) => {
   const [currentMsg, setCurrentMsg] = useState(data.message)
   const [currentFont, setCurrentFont] = useState(data.fontFamily)
   const [currentBgColor, setCurrentBgColor] = useState(
-    data.bgColor || '#000000'
+    data.bgColor || theme.colors.backgroundColor
   )
-  const [currentColor, setCurrentColor] = useState(data.color || '#f5821f')
+  const [currentColor, setCurrentColor] = useState(
+    data.color || theme.colors.primary
+  )
   const {
     register,
     formState: { errors }
@@ -36,15 +39,7 @@ const FormCreateMessage = ({ data, onMsgChange, onClose }: Props) => {
     })
   }
 
-  const fonts = [
-    'Open Sans',
-    'Italianno',
-    'Kalam',
-    'Loved by the King',
-    'Myriad Pro Condensed',
-    'Century Gothic',
-    'Century Gothic Condensed'
-  ]
+  const { fonts } = theme
 
   return (
     <>

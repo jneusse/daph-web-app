@@ -1,27 +1,3 @@
-// Small tablets and large smartphones (landscape view)
-$screen-sm-min: 576px;
-
-// Small tablets (portrait view)
-$screen-md-min: 768px;
-
-// Tablets and small desktops
-$screen-lg-min: 992px;
-
-// Large tablets and desktops
-$screen-xl-min: 1200px;
-
-@mixin media-breakpoint-up($screen-size) {
-  @media (min-width: $screen-size) {
-    @content;
-  }
-}
-
-@mixin media-breakpoint-down($screen-size) {
-  @media (max-width: $screen-size) {
-    @content;
-  }
-}
-
 $spacer: 8px;
 
 // helpers

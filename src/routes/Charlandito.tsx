@@ -3,6 +3,7 @@ import Dialog from '../components/Dialog'
 import FormCreateMessage from '../components/FormCreateMessage'
 import { MsgDataType } from '../types'
 import { DownloadableImage } from '../components/Downloadable'
+import { theme } from '../config/theme'
 
 export const Charlandito = () => {
   const [open, setOpen] = useState(false)
@@ -15,7 +16,10 @@ export const Charlandito = () => {
     setOpen(false)
     setMessageData({
       ...data,
-      color: data.bgColor === '#000000' ? '#FFFFFF' : '#000000',
+      color:
+        data.bgColor === theme.colors.black
+          ? theme.colors.white
+          : theme.colors.black,
       image: '/images/charlandito.png'
     })
   }
@@ -31,7 +35,10 @@ export const Charlandito = () => {
             dangerouslySetInnerHTML={{ __html: messageData.message }}
             style={{
               fontFamily: messageData.fontFamily,
-              color: messageData.bgColor === '#000000' ? '#FFFFFF' : '#000000'
+              color:
+                messageData.bgColor === theme.colors.black
+                  ? theme.colors.white
+                  : theme.colors.black
             }}
           ></p>
           <div className="watermark">
@@ -49,8 +56,14 @@ export const Charlandito = () => {
           </section>
         </Dialog>
         <menu className="actions mt-2">
-          <DownloadableImage messageData={messageData} />
-          <button className="border-primary" onClick={() => setOpen(true)}>
+          <DownloadableImage
+            className="charlandito"
+            messageData={messageData}
+          />
+          <button
+            className="charlandito border-primary"
+            onClick={() => setOpen(true)}
+          >
             Crear mensaje
           </button>
         </menu>
