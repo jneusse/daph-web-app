@@ -32,4 +32,8 @@ $primary-charlandito: #f5821f;
 .charlandito {
   color: $primary-charlandito !important;
   border-color: $primary-charlandito !important;
+  * {
+    color: $primary-charlandito !important;
+    border-color: $primary-charlandito !important;
+  }
 }

@@ -11,7 +11,7 @@ interface DownloadableImageType {
 
 export const DownloadableImage = ({
   messageData,
-  className
+  className = ''
 }: DownloadableImageType) => {
   const content = useRef<HTMLElement>(null)
 
@@ -49,7 +49,7 @@ export const DownloadableImage = ({
         </section>
       </div>
       <button
-        className={`border-primary ${className}`}
+        className={`border-color-primary ${className}`}
         onClick={handleCaptureClick}
       >
         Descargar

@@ -27,7 +27,7 @@ export const Charlandito = () => {
   return (
     <>
       <div className="full-size">
-        <section
+        <div
           className="container-charlandito"
           style={{ backgroundColor: messageData.bgColor }}
         >
@@ -44,8 +44,12 @@ export const Charlandito = () => {
           <div className="watermark">
             <img src="/images/charlandito.png" alt="charlandito podcast" />
           </div>
-        </section>
-        <Dialog isOpen={open} onClose={() => setOpen(false)}>
+        </div>
+        <Dialog
+          isOpen={open}
+          onClose={() => setOpen(false)}
+          className="charlandito"
+        >
           <section className="p-1">Crea tu mensaje</section>
           <section className="p-1">
             <FormCreateMessage
@@ -61,7 +65,7 @@ export const Charlandito = () => {
             messageData={messageData}
           />
           <button
-            className="charlandito border-primary"
+            className="charlandito border-color-primary"
             onClick={() => setOpen(true)}
           >
             Crear mensaje

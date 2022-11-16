@@ -45,7 +45,7 @@ export const MyLove = () => {
       </Dialog>
       <menu className="actions my-2">
         <DownloadableImage messageData={messageData} />
-        <button className="border-primary" onClick={() => setOpen(true)}>
+        <button className="border-color-primary" onClick={() => setOpen(true)}>
           Crear mensaje
         </button>
       </menu>

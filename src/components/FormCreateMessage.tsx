@@ -47,7 +47,7 @@ const FormCreateMessage = ({ data, onMsgChange, onClose }: Props) => {
         <label>Mensaje</label>
         <textarea
           rows={8}
-          className="border-primary"
+          className="border-color-primary"
           placeholder="Escribe tu mensaje personalizado aqui"
           {...register('message', {
             value: currentMsg || '',
@@ -75,7 +75,7 @@ const FormCreateMessage = ({ data, onMsgChange, onClose }: Props) => {
             }
           })}
           style={{ fontFamily: currentFont }}
-          className="border-primary"
+          className="border-color-primary"
         >
           {fonts.map((option, key) => (
             <option key={key} value={option} style={{ fontFamily: option }}>
@@ -93,7 +93,7 @@ const FormCreateMessage = ({ data, onMsgChange, onClose }: Props) => {
               setCurrentColor(e.target.value)
             }
           })}
-          className="border-primary"
+          className="border-color-primary"
         />
         <label>Fondo</label>
         <input
@@ -105,19 +105,19 @@ const FormCreateMessage = ({ data, onMsgChange, onClose }: Props) => {
               setCurrentBgColor(e.target.value)
             }
           })}
-          className="border-primary"
+          className="border-color-primary"
         />
       </form>
       <menu className="actions">
         <button
-          className="border-primary mt-2"
+          className="border-color-primary mt-2"
           style={{ marginRight: 'auto' }}
           onClick={onClose}
         >
           Cancelar
         </button>
         <button
-          className="border-primary mt-2"
+          className="border-color-primary mt-2"
           style={{ marginRight: 'auto' }}
           onClick={onSubmit}
         >
