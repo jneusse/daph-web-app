@@ -20,7 +20,8 @@ export const Charlandito = () => {
         data.bgColor === theme.colors.black
           ? theme.colors.white
           : theme.colors.black,
-      image: '/images/charlandito.png'
+      image: '/images/charlandito.png',
+      borderColor: theme.colors.primaryCharlandito
     })
   }
 

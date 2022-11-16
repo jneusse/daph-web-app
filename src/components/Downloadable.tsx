@@ -31,7 +31,7 @@ export const DownloadableImage = ({
           ref={content}
           style={{
             backgroundColor: messageData.bgColor,
-            borderColor: messageData.color
+            borderColor: messageData.borderColor || messageData.color
           }}
         >
           <p

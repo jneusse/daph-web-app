@@ -4,4 +4,5 @@ export type MsgDataType = {
   bgColor?: string
   image?: string
   color?: string
+  borderColor?: string
 }

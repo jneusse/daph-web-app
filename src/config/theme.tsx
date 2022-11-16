@@ -4,7 +4,8 @@ export const theme = {
     white: '#ffffff',
     primary: '#863a6f',
     primaryHover: '#975c8d',
-    backgroundColor: '#ffffff'
+    backgroundColor: '#ffffff',
+    primaryCharlandito: '#f5821f'
   },
   fonts: [
     'Open Sans',
