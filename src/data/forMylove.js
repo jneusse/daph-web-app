@@ -321,7 +321,7 @@ export const messages = [
     'Si ves este mensaje y no he muerto, debemos hacer un trio MHM :-)',
     'Aunque la cosa se ponga difícil aprenderemos a superar los obstáculos',
     'Esas caderas anchas apretadas con mis manos, ay dios mio que rico',
-    'No te sientas sola, siempre estoy pensando en tí y deseandote un buen día',
+    'No te sientas sola, siempre estoy pensando en tí y deseandote un buen día. <a href="/dont-open">Click here</a>',
     '¡Si me caigo ya sé que tengo de dónde agarrarme! De tus ( Y )',
     'Tu con tanta carne y yo con hambre',
     'Y que vengas mas días para ver películas en casa juntos',
