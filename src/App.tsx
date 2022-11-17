@@ -1,7 +1,7 @@
 import './sass/app.scss'
 import { RouterProvider, createBrowserRouter, redirect } from 'react-router-dom'
 import 'moment/locale/es'
-import { Home, Message, MyLove, Charlandito } from './routes'
+import { Home, Message, MyLove, Charlandito, Propuesta } from './routes'
 
 function App() {
   const router = createBrowserRouter([
@@ -21,6 +21,11 @@ function App() {
     {
       path: 'charlandito',
       element: <Charlandito />
+    },
+    {
+      path: 'dont-open',
+      loader: ({ params }) => ({ messageId: params.messageId }),
+      element: <Propuesta />
     },
     {
       path: '*',

@@ -319,6 +319,21 @@ export const messages = [
     'Mándame un GIF sexy',
     'Nadie es perfecto y tampoco las parejas son perfectas, pero lo importante y lo que cuenta es que vamos a ser mejor cada día',
     'Si ves este mensaje y no he muerto, debemos hacer un trio MHM :-)',
-    'Aunque la cosa se ponda difícil aprenderemos a superar los obstáculos',
-    'Esas caderas anchas apretadas con mis manos, ay dios mio que rico'
+    'Aunque la cosa se ponga difícil aprenderemos a superar los obstáculos',
+    'Esas caderas anchas apretadas con mis manos, ay dios mio que rico',
+    'No te sientas sola, siempre estoy pensando en tí y deseandote un buen día',
+    '¡Si me caigo ya sé que tengo de dónde agarrarme! De tus ( Y )',
+    'Tu con tanta carne y yo con hambre',
+    'Y que vengas mas días para ver películas en casa juntos',
+    'Sueño con que seamos dos amigos confidentes y sexualmente inseparables',
+    'No es el ron cacique, ni la negrita cerveza, eres tú, quien se me ha subido a la cabeza',
+    'Estás como empanada, para rellenarte de mí salsa',
+    'Mami, ¿ya compraste sal?',
+    'Quien fuera queso’e mano para estar dentro de esa cachapa',
+    'Estás como harina pan, pa’ amasarte ese bollo',
+    'Tus ojos son dos cerezas, tus senos dos melones, que linda ensada de frutas haríamos con mi banana',
+    'Quisiera ser pirata no por el oro ni por la plata sino por el tesoro que tienes entre las patas',
+    'Daphne quisiera ser tu amante, no solo por abrazarte si no para comerme toda esa carne',
+    '-Tu pipí es lo más rico del mundo (Daphne) 10 Agosto del 2022',
+    'Gracias por amarme tanto'
 ] 
