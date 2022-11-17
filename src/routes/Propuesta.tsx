@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import Dialog from '../components/Dialog'
 
 type Props = {}
@@ -24,16 +24,7 @@ export const Propuesta = (props: Props) => {
   const [open, setOpen] = useState(false)
   const [urlImage, setUrlImage] = useState(gifs[0])
 
-  useEffect(() => {
-    const isOpen = localStorage.getItem('isOpened')
-    if (isOpen === 'true') {
-      alert('Ya has dicho, SI. No te puedes arrepentir')
-      changeMessage()
-      setOpen(true)
-    }
-  }, [])
-
-  const changeMessage = (index = 0) => {
+  const changeMessage = useCallback((index = 0) => {
     if (index < gifs.length) {
       setUrlImage(gifs[index])
       setTimeout(() => {
@@ -43,7 +34,16 @@ export const Propuesta = (props: Props) => {
       window.open('https://yisusmx.t.me')
       changeMessage(0)
     }
-  }
+  }, [])
+
+  useEffect(() => {
+    const isOpen = localStorage.getItem('isOpened')
+    if (isOpen === 'true') {
+      alert('Ya has dicho, SI. No te puedes arrepentir')
+      changeMessage()
+      setOpen(true)
+    }
+  }, [changeMessage])
 
   return (
     <div className="card-image-corazones">
