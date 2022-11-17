@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { theme } from '../config/theme'
 import { MsgDataType } from '../types'
 
 type Inputs = {
@@ -19,9 +20,11 @@ const FormCreateMessage = ({ data, onMsgChange, onClose }: Props) => {
   const [currentMsg, setCurrentMsg] = useState(data.message)
   const [currentFont, setCurrentFont] = useState(data.fontFamily)
   const [currentBgColor, setCurrentBgColor] = useState(
-    data.bgColor || '#000000'
+    data.bgColor || theme.colors.backgroundColor
   )
-  const [currentColor, setCurrentColor] = useState(data.color || '#f5821f')
+  const [currentColor, setCurrentColor] = useState(
+    data.color || theme.colors.primary
+  )
   const {
     register,
     formState: { errors }
@@ -36,15 +39,7 @@ const FormCreateMessage = ({ data, onMsgChange, onClose }: Props) => {
     })
   }
 
-  const fonts = [
-    'Open Sans',
-    'Italianno',
-    'Kalam',
-    'Loved by the King',
-    'Myriad Pro Condensed',
-    'Century Gothic',
-    'Century Gothic Condensed'
-  ]
+  const { fonts } = theme
 
   return (
     <>
@@ -52,7 +47,7 @@ const FormCreateMessage = ({ data, onMsgChange, onClose }: Props) => {
         <label>Mensaje</label>
         <textarea
           rows={8}
-          className="border-primary"
+          className="border-color-primary"
           placeholder="Escribe tu mensaje personalizado aqui"
           {...register('message', {
             value: currentMsg || '',
@@ -80,7 +75,7 @@ const FormCreateMessage = ({ data, onMsgChange, onClose }: Props) => {
             }
           })}
           style={{ fontFamily: currentFont }}
-          className="border-primary"
+          className="border-color-primary"
         >
           {fonts.map((option, key) => (
             <option key={key} value={option} style={{ fontFamily: option }}>
@@ -98,7 +93,7 @@ const FormCreateMessage = ({ data, onMsgChange, onClose }: Props) => {
               setCurrentColor(e.target.value)
             }
           })}
-          className="border-primary"
+          className="border-color-primary"
         />
         <label>Fondo</label>
         <input
@@ -110,19 +105,19 @@ const FormCreateMessage = ({ data, onMsgChange, onClose }: Props) => {
               setCurrentBgColor(e.target.value)
             }
           })}
-          className="border-primary"
+          className="border-color-primary"
         />
       </form>
       <menu className="actions">
         <button
-          className="border-primary mt-2"
+          className="border-color-primary mt-2"
           style={{ marginRight: 'auto' }}
           onClick={onClose}
         >
           Cancelar
         </button>
         <button
-          className="border-primary mt-2"
+          className="border-color-primary mt-2"
           style={{ marginRight: 'auto' }}
           onClick={onSubmit}
         >

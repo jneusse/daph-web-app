@@ -1,4 +1,5 @@
-import { MsgDataType } from './types'
+import { theme } from '../config/theme'
+import { MsgDataType } from '../types'
 
 type Props = {
   date: string
@@ -10,8 +11,8 @@ const FullCard = ({ date, messageData, onClick }: Props) => {
   const {
     message = 'Un mensaje especíal espera por ti. Nos vemos pronto',
     fontFamily = 'Italianno',
-    bgColor = '#000000',
-    color = '#f5821f'
+    bgColor = theme.colors.backgroundColor,
+    color = theme.colors.primary
   } = messageData
 
   return (
@@ -22,13 +23,14 @@ const FullCard = ({ date, messageData, onClick }: Props) => {
       >
         <div
           className="full-card__item"
+          dangerouslySetInnerHTML={{ __html: message }}
           style={{
             fontFamily: fontFamily,
             color: color,
             textShadow: `-1rem 1rem 1rem ${color}`
           }}
         >
-          {message.trim()}
+          {/* {message.trim()} */}
         </div>
         {date && (
           <div className="full-card__item align-text-right">

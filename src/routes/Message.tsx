@@ -1,5 +1,5 @@
 import moment from 'moment'
-import FullCard from '../FullCard'
+import FullCard from '../components/FullCard'
 import { messages } from '../data/messages'
 import { useLoaderData } from 'react-router-dom'
 

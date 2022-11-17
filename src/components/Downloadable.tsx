@@ -1,13 +1,18 @@
 import downloadjs from 'downloadjs'
 import html2canvas from 'html2canvas'
 import { useCallback, useRef } from 'react'
+import { theme } from '../config/theme'
 import { MsgDataType } from '../types'
 
-export const DownloadableImage = ({
-  messageData
-}: {
+interface DownloadableImageType {
   messageData: MsgDataType
-}) => {
+  className?: string
+}
+
+export const DownloadableImage = ({
+  messageData,
+  className = ''
+}: DownloadableImageType) => {
   const content = useRef<HTMLElement>(null)
 
   const handleCaptureClick = useCallback(async () => {
@@ -26,14 +31,14 @@ export const DownloadableImage = ({
           ref={content}
           style={{
             backgroundColor: messageData.bgColor,
-            borderColor: messageData.color
+            borderColor: messageData.borderColor || messageData.color
           }}
         >
           <p
             dangerouslySetInnerHTML={{ __html: messageData.message }}
             style={{
               fontFamily: messageData.fontFamily,
-              color: messageData.color || '#f5821f'
+              color: messageData.color || theme.colors.primary
             }}
           ></p>
           {messageData.image && (
@@ -43,7 +48,10 @@ export const DownloadableImage = ({
           )}
         </section>
       </div>
-      <button className="border-primary" onClick={handleCaptureClick}>
+      <button
+        className={`border-color-primary ${className}`}
+        onClick={handleCaptureClick}
+      >
         Descargar
       </button>
     </>

@@ -1,20 +1,21 @@
 import moment from 'moment'
-import FullCard from '../FullCard'
+import FullCard from '../components/FullCard'
 import { messages } from '../data/forMylove'
 import Dialog from '../components/Dialog'
 import { useState } from 'react'
 import FormCreateMessage from '../components/FormCreateMessage'
 import { DownloadableImage } from '../components/Downloadable'
 import { MsgDataType } from '../types'
+import { theme } from '../config/theme'
 
 export const MyLove = () => {
   const [open, setOpen] = useState(false)
-  const date = moment().format('LLLL')
+  const date = moment().format('LL')
   const dayOfTheYear = moment().dayOfYear()
   const [messageData, setMessageData] = useState<MsgDataType>({
     message: messages[dayOfTheYear],
     fontFamily: 'Kalam',
-    bgColor: '#OOOOOO'
+    bgColor: theme.colors.backgroundColor
   })
 
   const openModal = () => setOpen(true)
@@ -44,7 +45,7 @@ export const MyLove = () => {
       </Dialog>
       <menu className="actions my-2">
         <DownloadableImage messageData={messageData} />
-        <button className="border-primary" onClick={() => setOpen(true)}>
+        <button className="border-color-primary" onClick={() => setOpen(true)}>
           Crear mensaje
         </button>
       </menu>
