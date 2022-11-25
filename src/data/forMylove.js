@@ -335,5 +335,6 @@ export const messages = [
     'Quisiera ser pirata no por el oro ni por la plata sino por el tesoro que tienes entre las patas',
     'Daphne quisiera ser tu amante, no solo por abrazarte si no para comerme toda esa carne',
     '-Tu pipí es lo más rico del mundo (Daphne) 10 Agosto del 2022',
-    'Gracias por amarme tanto'
+    'Gracias por amarme tanto',
+    'Las rosas son rojas, las orquídeas violetas, y en mi intento de poeta te chupo hasta las tetas'
 ] 
