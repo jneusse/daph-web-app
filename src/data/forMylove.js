@@ -336,5 +336,18 @@ export const messages = [
     'Daphne quisiera ser tu amante, no solo por abrazarte si no para comerme toda esa carne',
     '-Tu pipí es lo más rico del mundo (Daphne) 10 Agosto del 2022',
     'Gracias por amarme tanto',
-    'Las rosas son rojas, las orquídeas violetas, y en mi intento de poeta te chupo hasta las tetas'
+    'Las rosas son rojas, las orquídeas violetas, y en mi intento de poeta te chupo hasta las tetas',
+    '',
+    '',
+    'Sigue así así así de rica que te voy a comer',
+    'Me encanta cuando nos extrañamos y luego dedicamos el tiempo solo para los dos',
+    'Recuerdo cuando me decias -dime que rico- que me encanta',
+    'Un día a la vez, no hay que apresurase, de todas formas estaremos juntos por siempre',
+    'Ponte esa tanguita que me encanta, y mandame una foto',
+    'Muestra mas esos melones que vean lo q me como, el médico me lo mandó así tal cual',
+    'Está bien estaré mas guapo para tí, le diré adios a la ropa de mendigo',
+    'Envíame una foto de tu mano tocando tu seno (con ropa)',
+    'Te reto a mandar una foto de tus tetas a un desconocido',
+    '¿Que haces? yo te extraño aunque no me de cuenta',
+    'Deseos tus besos en mi miembro, mojados pero muy muy mojados'
 ] 
