@@ -19,19 +19,20 @@ const FullCard = ({ date, messageData, onClick }: Props) => {
     <div className="full-size">
       <div
         className="full-card"
-        style={{ backgroundColor: bgColor, borderColor: color }}
+        style={{
+          backgroundColor: bgColor,
+          borderColor: color,
+          background: `linear-gradient(180deg,  ${color} 0%, ${bgColor} 15%, ${bgColor} 85%,  ${color} 100%)`
+        }}
       >
         <div
           className="full-card__item"
           dangerouslySetInnerHTML={{ __html: message }}
           style={{
             fontFamily: fontFamily,
-            color: color,
-            textShadow: `-1rem 1rem 1rem ${color}`
+            color: color
           }}
-        >
-          {/* {message.trim()} */}
-        </div>
+        ></div>
         {date && (
           <div className="full-card__item align-text-right">
             <span

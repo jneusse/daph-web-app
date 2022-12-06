@@ -55,20 +55,20 @@
     font-size: 3rem;
     padding: 0 2rem;
     text-align: center;
-    text-shadow: -1rem 1rem 1rem $primary-hover;
+    // text-shadow: -1rem 1rem 1rem $primary-hover;
     flex-wrap: nowrap;
-    animation-name: text-shadow;
-    animation-duration: 4s;
-    animation-timing-function: ease-out;
+    // animation-name: text-shadow;
+    // animation-duration: 4s;
+    // animation-timing-function: ease-out;
 
-    @keyframes text-shadow {
-      from {
-        text-shadow: 1rem -1rem 1rem;
-      }
-      to {
-        text-shadow: -1rem 1rem 1rem;
-      }
-    }
+    // @keyframes text-shadow {
+    //   from {
+    //     text-shadow: 1rem -1rem 1rem;
+    //   }
+    //   to {
+    //     text-shadow: -1rem 1rem 1rem;
+    //   }
+    // }
 
     @media (max-width: 600px) {
       font-size: 2rem;
